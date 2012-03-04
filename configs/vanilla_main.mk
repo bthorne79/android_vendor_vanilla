@@ -43,3 +43,9 @@ ifeq ($(PIXEL),true)
     PRODUCT_PACKAGE_OVERLAYS += \
         vendor/vanilla/overlay/pixel
 endif
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/vanilla/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/vanilla/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/vanilla/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh
