@@ -12,13 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/flash/configs/aosp_fixes.mk
-include vendor/flash/configs/bootanimation.mk
-include vendor/flash/configs/custom_main.mk
-include vendor/flash/configs/system_additions.mk
+# Include overlays
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/flash/overlay/common
 
-# Telephony packages
+# Main Required Packages
 PRODUCT_PACKAGES += \
-    Stk \
-    CellBroadcastReceiver
-
+    Launcher3 \
+    LiveWallpapersPicker
