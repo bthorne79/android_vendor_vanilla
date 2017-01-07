@@ -12,18 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit AOSP device configuration for bullhead
-$(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
+# Include custom telephony configuration
+include vendor/flash/configs/custom_phone.mk
+
+# Inherit AOSP device configuration for shamu.
+$(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := bullhead
+PRODUCT_NAME := flash_shamu
 PRODUCT_BRAND := google
-PRODUCT_DEVICE := bullhead
-PRODUCT_MODEL := Nexus 5X
-PRODUCT_MANUFACTURER := LGE
+PRODUCT_DEVICE := shamu
+PRODUCT_MODEL := Nexus 6
+PRODUCT_MANUFACTURER := motorola
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=bullhead \
-    BUILD_FINGERPRINT=google/bullhead/bullhead:7.0/NRD90S/3142244:user/release-keys \
-    PRIVATE_BUILD_DESC="bullhead-user 7.0 NRD90S 3142244 release-keys"
+    PRODUCT_NAME=shamu \
+    BUILD_FINGERPRINT=google/shamu/shamu:7.0/NRD90M/3085278:user/release-keys \
+    PRIVATE_BUILD_DESC="shamu-user 7.0 NRD90M 3085278 release-keys"

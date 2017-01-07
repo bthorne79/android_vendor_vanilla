@@ -12,18 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit AOSP device configuration for angler
-$(call inherit-product, device/huawei/angler/aosp_angler.mk)
+# Inherit AOSP device configuration for bullhead
+$(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := angler
+PRODUCT_NAME := flash_bullhead
 PRODUCT_BRAND := google
-PRODUCT_DEVICE := angler
-PRODUCT_MODEL := Nexus 6P
-PRODUCT_MANUFACTURER := Huawei
+PRODUCT_DEVICE := bullhead
+PRODUCT_MODEL := Nexus 5X
+PRODUCT_MANUFACTURER := LGE
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=angler \
-    BUILD_FINGERPRINT=google/angler/angler:7.0/NRD90U/3155372:user/release-keys \
-    PRIVATE_BUILD_DESC="angler-user 7.0 NRD90U 3155372 release-keys"
+    PRODUCT_NAME=bullhead \
+    BUILD_FINGERPRINT=google/bullhead/bullhead:7.0/NRD90S/3142244:user/release-keys \
+    PRIVATE_BUILD_DESC="bullhead-user 7.0 NRD90S 3142244 release-keys"
