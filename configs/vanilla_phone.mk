@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/flash/configs/aosp_fixes.mk
-include vendor/flash/configs/bootanimation.mk
-include vendor/flash/configs/custom_main.mk
-include vendor/flash/configs/system_additions.mk
-include vendor/flash/configs/version.mk
+include vendor/vanilla/configs/aosp_fixes.mk
+include vendor/vanilla/configs/bootanimation.mk
+include vendor/vanilla/configs/vanilla_main.mk
+include vendor/vanilla/configs/system_additions.mk
+include vendor/vanilla/configs/version.mk
 
 # Telephony packages
 PRODUCT_PACKAGES += \
