@@ -22,7 +22,8 @@ PRODUCT_PACKAGES += \
 
 # Custom Packages
 PRODUCT_PACKAGES += \
-    ThemeInterfacer
+    ThemeInterfacer \
+    OmniJaws
 
 # ThemeInterfacer sig check override
 # Default value is false
