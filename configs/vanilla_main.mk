@@ -39,15 +39,24 @@ PRODUCT_PACKAGES += \
     PixelLauncher
 
 # Build Pixel things if requested
-ifeq ($(PIXEL),true)
-    PRODUCT_PACKAGES += PixelLauncherIcons
+ifeq ($(Public),skye)
+PRODUCT_PACKAGES += PixelLauncherIcons
 
-    PRODUCT_PACKAGE_OVERLAYS += \
-        vendor/vanilla/overlay/pixel
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/vanilla/overlay/pixel
 
-    # Set Pixel blue light theme on Gboard
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.com.google.ime.theme_id=5
+# Set Pixel blue light theme on Gboard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.ime.theme_id=5
+else ifeq ($(PIXEL),true)
+PRODUCT_PACKAGES += PixelLauncherIcons
+
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/vanilla/overlay/pixel
+
+# Set Pixel blue light theme on Gboard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.ime.theme_id=5
 endif
 
 # Backup Tool
